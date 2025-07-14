@@ -27,9 +27,9 @@ function App() {
   return (
     <>
       <Navbar setCurrentPage={setCurrentPage} setShowModal={setShowModal} />
-      <main style={{ paddingTop: '100px' }}>
+      <div className="main-content">
         {renderPage()}
-      </main>
+      </div>
       <Modal isOpen={showModal} onClose={() => setShowModal(false)} />
       <Footer />
     </>
