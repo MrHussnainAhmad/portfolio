@@ -15,17 +15,4 @@ body {
 #root {
   min-height: 100vh;
 }
-
-.app-container {
-  position: relative;
-  min-height: 100vh;
-  width: 100%;
-  margin-top: 100px; /* Space for fixed navbar */
-}
-
-@media (max-width: 425px) {
-  .app-container {
-    margin-top: 80px; /* Smaller space for mobile navbar */
-  }
-}
 }

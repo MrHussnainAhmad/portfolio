@@ -10,11 +10,10 @@
   justify-content: space-between;
   align-items: center;
   padding: 2rem 5%;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.8);
   z-index: 1000;
   backdrop-filter: blur(10px);
-  height: 100px;
-  box-sizing: border-box;
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .logo {
@@ -281,8 +280,4 @@
     font-size: 0.6rem;
   }
 
-  .navbar {
-    height: 80px;
-    padding: 1.5rem 3%;
-  }
 }
