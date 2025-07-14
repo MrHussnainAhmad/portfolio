@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+.main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5%;
+    background-color: #000000;
+    position: relative;
+}
+
+.main::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.02) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.leftHero {
+    width: 60%;
+    padding-right: 5%;
+}
+
+.rightHero {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.h1Greetings {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 2rem;
+    animation: fadeInText 1s ease-out 0.5s both;
+}
+
+.span {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #ffffff;
+    display: block;
+    margin: 1rem 0;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    animation: typewriterGlow 2s ease-out 1s both;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 3rem;
+    max-width: 600px;
+}
+
+.rightHero h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 2rem;
+}
+
+.cvButton, .projectsHere {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    padding: 12px 0;
+    color: #ffffff;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.4s ease;
+    margin-right: 2rem;
+    position: relative;
+}
+
+.cvButton::after, .projectsHere::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #ffffff;
+    transition: width 0.4s ease;
+}
+
+.cvButton:hover::after, .projectsHere:hover::after {
+    width: 100%;
+}
+
+.cvButton:hover, .projectsHere:hover {
+    color: #ffffff;
+    padding-left: 10px;
+}
+
+/* Subtle entrance animation */
+.leftHero {
+    animation: fadeInLeft 1.2s ease-out;
+}
+
+.rightHero {
+    animation: fadeInRight 1.2s ease-out 0.3s both;
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes typewriterGlow {
+    from {
+        width: 0;
+        border-right: 2px solid #ffffff;
+    }
+    to {
+        width: 100%;
+        border-right: none;
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .main {
+        flex-direction: column;
+        padding: 5% 7%;
+        align-items: flex-start;
+    }
+    
+    .leftHero, .rightHero {
+        width: 100%;
+        padding-right: 0;
+    }
+    
+    .span {
+        font-size: 3rem;
+    }
+    
+    .rightHero {
+        margin-top: 3rem;
+    }
+}
