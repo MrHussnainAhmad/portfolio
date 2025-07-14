@@ -10,7 +10,6 @@ body {
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
   min-height: 100vh;
-  padding-top: 100px !important; /* Add space for fixed navbar */
 }
 
 #root {
@@ -21,5 +20,12 @@ body {
   position: relative;
   min-height: 100vh;
   width: 100%;
+  margin-top: 100px; /* Space for fixed navbar */
+}
+
+@media (max-width: 425px) {
+  .app-container {
+    margin-top: 80px; /* Smaller space for mobile navbar */
+  }
 }
 }
