@@ -6,6 +6,7 @@ import { Projects } from './components/Projects'
 import { Contact } from './components/Contact'
 import { Modal } from './components/Modal'
 import { Footer } from './components/Footer'
+import { StarField } from './components/StarField'
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home')
@@ -26,6 +27,7 @@ function App() {
 
   return (
     <>
+      <StarField />
       <Navbar setCurrentPage={setCurrentPage} setShowModal={setShowModal} />
       <div className="main-content">
         {renderPage()}
