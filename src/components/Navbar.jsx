@@ -45,7 +45,7 @@ export const Navbar = ({ setCurrentPage, setShowModal }) => {
         <button id="contact" onClick={() => handleNavClick('contact')} title="Contact">
           <FontAwesomeIcon icon={faEnvelope} />
         </button>
-        <button className="buttonSpecial" id="refer" onClick={handleModalOpen} title="Resume">
+        <button className="buttonSpecial" id="refer" onClick={handleModalOpen} title="Share">
           <FontAwesomeIcon icon={faSquareUpRight} />
         </button>
       </div>
@@ -68,7 +68,7 @@ export const Navbar = ({ setCurrentPage, setShowModal }) => {
           </button>
           <button className="buttonSpecial" id="refer-mobile" onClick={handleModalOpen} title="Resume">
             <FontAwesomeIcon icon={faSquareUpRight} />
-            <span>Resume</span>
+            <span>Share</span>
           </button>
         </div>
       </div>

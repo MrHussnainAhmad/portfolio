@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
 import './styles/Projects.css';
 import ebooksWeb from '../assets/ebookhubWeb.png';
-import talkoraWeb from '../assets/talkoraWeb.png';
+import CipherWeb from '../assets/Cipher.png';
 import vetvillePet from '../assets/vetvillepet.png';
 import portfolio from '../assets/portfolio.png';
-import talkoramobile from '../assets/talkoramobile.png';
+import Ciphermobile from '../assets/talkoramobile.png';
+import Shop from "../assets/shop.png"
+import Streamme from "../assets/Streamme.png"
+import LMS from "../assets/LMS.png"
+import Tapwar from "../assets/Tapwar.png"
+
 
 export const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -43,23 +48,23 @@ const projects = [
   },
   {
     id: 3,
-    title: "Talkora Web App",
+    title: "Cipher Web App",
     description: "A real-time chatting platform focused on simplicity and speed. It supports user authentication, profile management, and smooth UX transitions across conversation threads.",
     technologies: ["React", "Socket.io", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
     status: "Live but Backend not deployed",
     link: "https://github.com/MrHussnainAhmad/Talko-WEB-frontend-v1",
-    preview: "https://talkora-web-frontend-v1.vercel.app/",
-    image: talkoraWeb
+    preview: "#",
+    image: CipherWeb
   },
   {
     id: 5,
-    title: "Talkora Mobile App",
-    description: "A mobile version of the Talkora chat platform, designed using React Native. Features include real-time messaging, push notifications, and offline data sync for seamless communication.",
+    title: "Cipher Mobile App",
+    description: "A mobile version of the Cipher chat platform, designed using React Native. Features include real-time messaging, push notifications, and offline data sync for seamless communication.",
     technologies: ["React Native", "Firebase", "Expo", "Socket.io", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
     status: "Live but Backend not deployed",
     link: "https://github.com/MrHussnainAhmad/Talkora-Mobile-App",
     preview: "#",
-    image: talkoramobile
+    image: Ciphermobile
   },
   {
     id: 6,
@@ -70,6 +75,46 @@ const projects = [
     link: "https://github.com/MrHussnainAhmad/vetpet",
     preview: "https://vetpet-port.vercel.app/",
     image: vetvillePet
+  },
+  {
+    id: 7,
+    title: "College LMS",
+    description: "**College LMS** is a smart learning platform with a mobile app for teachers and students, and a web app for admins to manage classes, subjects, attendance, assignments, and announcements—all in one place.",
+    technologies: ["Reactjs","React Native", "Nodejs", "Expressjs","MongoDB", "Tailwind", "MERN"],
+    status: "Live",
+    link: "https://github.com/MrHussnainAhmad/aplhamobile",
+    preview: "#",
+    image: LMS
+  },
+  {
+    id: 8,
+    title: "StreamMe",
+    description: "**StreamMe** is a Next.js-based movie streaming platform that delivers fast, high-quality video through CDN integration. Designed with a Netflix-style interface, it features secure user authentication, built-in Google AdSense and custom ads, and offers free access to movies without any payment system.",
+    technologies: ["Next.js","MongoDb","CDN","MERN"],
+    status: "Live",
+    link: "https://github.com/MrHussnainAhmad/Streaming-Site",
+    preview: "#",
+    image: Streamme
+  },
+  {
+    id: 9,
+    title: "eCommerce",
+    description: "A modern eCommerce platform built for a smooth and secure shopping experience, featuring product browsing, cart and checkout systems, user authentication, order tracking, and admin management—all optimized for speed and performance with CDN integration.",
+    technologies: ["Next.js","MongoDb","Clerk","Cloudinary"],
+    status: "Live",
+    link: "https://github.com/MrHussnainAhmad/shop2",
+    preview: "#",
+    image: Shop
+  },
+  {
+    id: 10,
+    title: "TapWar",
+    description: "**TapWar** is a fun, fast-paced mobile game built with React Native that challenges your tapping speed and reflexes. Play in **Infinity mode** (endless score chase) or **Time mode** (score as many taps as possible within the clock) — simple controls, instant rounds, pure tapping fun.",
+    technologies: ["React Native", "GAME"],
+    status: "Live",
+    link: "https://github.com/MrHussnainAhmad/TapWar",
+    preview: "#",
+    image: Tapwar
   }
 ];
 

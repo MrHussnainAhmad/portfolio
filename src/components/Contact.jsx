@@ -92,7 +92,7 @@ export const Contact = () => {
               LinkedIn
             </h3>
             <a
-              href="https://www.linkedin.com/in/hussnain-ahamd-sahi/"
+              href="https://www.linkedin.com/in/hussnain-ahmad-sahi-b2b037396/"
               target="_blank"
               rel="noopener noreferrer"
             >
