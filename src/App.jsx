@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import './App.css'
 import { Navbar } from './components/Navbar'
 import { Hero } from './components/Hero'
 import { Projects } from './components/Projects'
@@ -29,7 +28,7 @@ function App() {
     <>
       <StarField />
       <Navbar setCurrentPage={setCurrentPage} setShowModal={setShowModal} />
-      <div className="main-content">
+      <div className="pt-20 md:pt-24 lg:pt-28 min-h-screen relative w-full">
         {renderPage()}
       </div>
       <Modal isOpen={showModal} onClose={() => setShowModal(false)} />

@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&family=Luxurious+Script&family=Markazi+Text:wght@400..700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Custom animations not in Tailwind config */
+@keyframes glowFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.9);
+    text-shadow: 0 0 50px rgba(255, 255, 255, 0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  }
+}
+
+@keyframes fadeInDelay {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Star movement animation */
+@keyframes move {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(calc(var(--move-x, 0px) * 0.3), calc(var(--move-y, 0px) * 0.3));
+  }
+  50% {
+    transform: translate(var(--move-x, 0px), var(--move-y, 0px));
+  }
+  75% {
+    transform: translate(calc(var(--move-x, 0px) * 0.7), calc(var(--move-y, 0px) * 1.2));
+  }
+  100% {
+    transform: translate(calc(var(--move-x, 0px) * -0.2), calc(var(--move-y, 0px) * -0.1));
+  }
+}
+
+/* Apply movement animation to stars */
+.animate-twinkle {
+  animation: twinkle 2s infinite ease-in-out alternate, 
+             move var(--move-duration, 80s) infinite linear alternate;
+}
+
+/* Performance optimizations */
+.animate-twinkle,
+.animate-shoot {
+  will-change: transform, opacity;
+}
+
+/* Responsive: Hide some stars on mobile */
+@media (max-width: 768px) {
+  .animate-twinkle:nth-child(n+100) {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .animate-twinkle:nth-child(n+75) {
+    display: none;
+  }
+}
